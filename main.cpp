@@ -16,6 +16,13 @@ public:
     ~Child() { cout << "Destruct Child object\n"; }
 };
 
+class Figure()
+{
+protected:
+    unsigned double a, b;
+    virtual void Show()=0;
+};
+
 int main(int argc, char *argv[])
 {
     cout << "* Create Object child" << endl;
