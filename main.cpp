@@ -20,6 +20,20 @@ public:
     void func() { cout << "Function func() of class Child\n"; }
 };
 
+class See
+{
+protected:
+    string info;
+public:
+    See(): info() {}
+    See(string info):info(info) {}
+    
+    void Show()
+    {
+        cout<<info;
+    }
+};
+
 int main(int argc, char *argv[])
 {
     cout << "* Create Object base" << endl;
