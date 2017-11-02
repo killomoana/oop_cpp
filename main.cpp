@@ -16,10 +16,10 @@ public:
     ~Child() { cout << "Destruct Child object\n"; }
 };
 
-class Figure()
+class Figure
 {
 protected:
-    unsigned double a, b;
+    double a, b;
     virtual void Show()=0;
 };
 
