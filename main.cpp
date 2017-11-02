@@ -18,6 +18,39 @@ public:
     ~Child() { cout << "Destruct Child object\n"; }
 };
 
+class Point
+{
+protected:
+    double x, y;
+    virtual void Show()=0;
+public:
+    Point():x(0),y(0) {}
+    Point(double x, double y): x(x),y(y) {}
+    double GtX()
+    {
+        return x;
+    }
+    double GtY()
+    {
+        return y;
+    }
+};
+
+class PointSpace:public Point
+{
+protected:
+    Point *ss;
+    double z;
+public:
+    PointSpace(): Point(), z(0){}
+    PointSpace(double x, double y, double z): Point(x,y), z(z) {}
+    
+    void Show()
+    {
+	cout<< x << ", " << y << ", " << z << endl;
+    }
+};
+
 int main(int argc, char *argv[])
 {
     cout << "* Create Object base" << endl;
