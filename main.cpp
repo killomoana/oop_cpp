@@ -26,6 +26,21 @@ void Function(const Base &obj)
     obj.func();
 }
 
+class Help
+{
+protected:
+    int a, b;
+public:
+    int GtA()
+    {
+	return a;
+    }
+    int GtB()
+    {
+        return b;
+    }
+};
+
 int main(int argc, char *argv[])
 {
     cout << "* Create Object base" << endl;
